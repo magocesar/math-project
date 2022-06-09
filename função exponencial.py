@@ -1,24 +1,37 @@
+from xml.sax.handler import property_interning_dict
 from menu import menu
 
-def tipo(a, b, x):
-    x = input('Qual o valor de x :')
-    if x < 2 :
-        print('Essa função não é exponencial !!')
+def tipo(a, b, ):
+    a = int(input('Qual o valor de "a" : '))
+    b = int(input('Qual o valor de "b" :'))
+    if b < 0 or b == 1 :
+         print('Função não existe !!')
     else:
-        a = int(input('Qual o valor de "a" : '))
-        b = int(input('Qual o valor de "b" :'))
-        if b == '0' or b < 0 :
-            print('Função inválida')
-        else:
-            pass
+        if 0<b<1 :
+            print('Essa função é decrescente !!')
+        elif b > 1 :
+            print('Essa função é cresente !!') 
+
+
+def calcula_funcao(a, b, x):
+    a = int(input('Qual o valor de "a" : '))
+    b = int(input('Qual o valor de "b" :'))
+    if b < 0 or b == 1 :
+         print('Função não existe !!')
+    else:
+        x = int(input('Digite o valor de "x" desejado :'))
+        funcao = a*(b**x)
+        print(f'A função com {x} como valor de x resulta em :{funcao}')
 
 
 
 def funcaoexponencial(): 
-        print('[1] - Verificar se é crescente ou decrescente.',
+        ops=('[1] - Verificar se é crescente ou decrescente.',
         '[2] - Calcular função com outro expoente.',
         '[3] - Gerar gráfico da função.',
         '[4] - Voltar')
+        for i in ops:
+            print(i)
         while True:
             try:
                 opt = int(input('Coloque sua opção :'))
@@ -28,4 +41,8 @@ def funcaoexponencial():
                 if opt != [1, 2, 3, 4]:
                     print('\033[31mERRO!\033[m')
                 elif opt == '4':
-                    return menu
+                    return menu()
+                elif opt == 1:
+                    tipo()
+                elif opt == 2:
+                    calcula_funcao()
