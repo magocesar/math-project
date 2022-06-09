@@ -1,12 +1,12 @@
 
+#César
+
 def menu():
     ops = ('[1] - Função do Segundo Grau.',
     '[2] - Funções Exponenciais.',
     '[3] - Matrizes.',
     '[4] - Sair do Programa.')
-    print('-=-' * 10)
-    print('PROJETO - CÉSAR, OTÁVIO, RODRIGO'.center(30))
-    print('-=-' * 10)
+    print('Operações'.center(30))
     for op in ops:
         print(op)
     print('-=-' * 10)
