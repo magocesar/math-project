@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import numpy as np
 from menu import menu
 
 def tipo(a, b, ):
