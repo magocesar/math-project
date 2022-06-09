@@ -16,7 +16,7 @@ def menu():
         except ValueError:
             print('\033[31mERRO!\033[m')
         else:
-            if ask not in [1, 2, 3]:
+            if ask not in [1, 2, 3, 4]:
                 print('\033[31mOPÇÃO INVÁLIDA\033[m')
             else:
                 if ask == 1:
