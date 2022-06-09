@@ -18,7 +18,7 @@ while True:
     except:
         print('Erro, Tente Novamente ! ')
         break
-funcao_2grau(a,b,c)
+
 def funcao_2grau(a, b, c):
     while True:
      print('[1] - Calcular raizes',
