@@ -1,4 +1,4 @@
-from xml.sax.handler import property_interning_dict
+import matplotlib.pyplot as plt
 from menu import menu
 
 def tipo(a, b, ):
@@ -24,6 +24,17 @@ def calcula_funcao(a, b, x):
         print(f'A função com {x} como valor de x resulta em :{funcao}')
 
 
+def gerar_graph(a, b, x):
+    a = int(input('Qual o valor de "a" : '))
+    b = int(input('Qual o valor de "b" :'))
+    if b < 0 or b == 1 :
+         print('Função não existe !!')
+    else:
+        x1 = np.arange(0, b ** x, 1)
+        plt.plot(x1, x1 ** b)
+        plt.show()
+
+
 
 def funcaoexponencial(): 
         ops=('[1] - Verificar se é crescente ou decrescente.',
@@ -46,3 +57,5 @@ def funcaoexponencial():
                     tipo()
                 elif opt == 2:
                     calcula_funcao()
+                elif opt == 3:
+                    gerar_graph()
