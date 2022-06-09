@@ -12,5 +12,4 @@ if __name__ == '__main__':
     print('Participantes'.center(30))
     for name in names:
         print(name.center(30))
-    print('-=-' * 10)
     menu()
