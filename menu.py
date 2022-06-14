@@ -6,7 +6,7 @@ def menu():
     '[2] - Funções Exponenciais.',
     '[3] - Matrizes.',
     '[4] - Sair do Programa.')
-    print('Operações'.center(30))
+    print('Operações:'.center(30))
     for op in ops:
         print(op)
     print('-=-' * 10)
@@ -34,5 +34,8 @@ def information():
             'Otávio Carneiro Nogueira',
             'Rodrigo Munch')
     print('-=-' * 10)
-    print('RCM CALCULADORA')
+    print('RCM CALCULADORA'.center(30))
+    print('-=-' * 10)
+    for n in part:
+        print(n.center(30))
     print('-=-' * 10)
