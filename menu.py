@@ -29,3 +29,10 @@ def menu():
                     print('Até Breve!')
                     break
 
+def information():
+    part = ('César Willian Pacheco',
+            'Otávio Carneiro Nogueira',
+            'Rodrigo Munch')
+    print('-=-' * 10)
+    print('RCM CALCULADORA')
+    print('-=-' * 10)
