@@ -9,7 +9,7 @@ def menu_functions_three():
     '[4] - Sair do Submenu')
     while True:
         print('-=-' * 10)
-        print('FUNÇÕES EXPONENCIAIS'.center(30))
+        print('MATRIZES'.center(30))
         print('-=-' * 10)
         for op in ops:
             print(op)
