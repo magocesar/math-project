@@ -125,7 +125,3 @@ def option_three():
     plt.show()
     sleep(1)
 
-
-
-
-
