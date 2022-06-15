@@ -1,9 +1,10 @@
 mat = []
 qtd = int(input('Digite a quantidade de linhas: '))
 colunas = int(input('Digite a quantidade de colunas: '))
+calculo = qtd*colunas
 for i in range(qtd):
     mat.append([])
-    for l in range(colunas):
+    for l in range(calculo - 3):
         num = int(input('Digite os valores em ordem da matriz: '))
         mat[i].append(num)
 print(mat)
@@ -27,17 +28,17 @@ def menu():
                 if op ==2:
                     pass
                 if op ==3:
-                    matriz_transposta(qtd,colunas)
+                    matriz_transposta(mat,colunas,calculo)
                 if op == 4:
                     print('Voltando ao menu principal !')
                     break
 
-def matriz_transposta(qtd,colunas):
-    matt = []
+def matriz_transposta(mat,colunas,calculo):
     print(mat)
+    matt = []
     for i in range(colunas):
         matt.append([])
-        for j in range(qtd):
-            num = int(input('Digite os numeros das colunas da matriz em ordem: '))
+        for j in range(calculo - 4):
+            num = int(input('Digite os numeros da matriz em ordem: '))
             matt[i].append(num)
     print(matt)
