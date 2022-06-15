@@ -1,6 +1,7 @@
 
 from função_segundo_grau import menu_functions_one
 from função_exponencial import menu_functions_two
+from função_matriz import menu_functions_three
 from time import sleep
 
 def menu():
@@ -29,7 +30,7 @@ def menu():
                 elif ask == 2:
                     menu_functions_two()
                 elif ask == 3:
-                    pass
+                    menu_functions_three()
                 elif ask == 4:
                     print('Até Breve!')
                     break
