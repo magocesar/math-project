@@ -1,12 +1,13 @@
 
 
+from cProfile import label
 from time import sleep
 from cmath import sqrt
 import numpy as np
 import matplotlib.pyplot as plt
 
 
-def menu_functions():
+def menu_functions_one():
     ops = ('[1] - Calcular Raizes',
     '[2] - Calcular Função em X pedido',
     '[3] - Calcular Vértice',
@@ -50,7 +51,7 @@ def menu_functions():
 def option_one():
     while True:
         try:
-            a = int(input('Digite o coeficiente "A": '))
+            a = float(input('Digite o coeficiente "A": '))
         except ValueError:
             print('\033[31mErro, Tente Novamente!\033[m')
         else:
@@ -58,14 +59,14 @@ def option_one():
     if a > 0:
             while True:
                 try:
-                    b = int(input('Digite o coeficiente "B": '))
+                    b = float(input('Digite o coeficiente "B": '))
                 except ValueError:
                     print('\033[31mErro, Tente Novamente!\033[m')
                 else:
                     break
             while True:
                 try:
-                    c = int(input('Digite o coeficiente "C": '))
+                    c = float(input('Digite o coeficiente "C": '))
                 except ValueError:
                     print('\033[31mErro, Tente Novamente!\033[m')
                 else:
@@ -103,14 +104,14 @@ def complex_number_calc_roots(a, b, c, delta):
 def option_two():
     while True:
         try:
-            a = int(input('Digite o coeficiente "A": '))
+            a = float(input('Digite o coeficiente "A": '))
         except ValueError:
             print('\033[31mErro, Tente Novamente!\033[m')
         else:
             break
     while True:
         try:
-            b = int(input('Digite o coeficiente "B": '))
+            b = float(input('Digite o coeficiente "B": '))
         except ValueError:
             print('\033[31mErro, Tente Novamente!\033[m')
         else:
@@ -124,7 +125,7 @@ def option_two():
             break
     while True:
         try:
-            x = int(input(f'Digite o Valor de "X": '))
+            x = float(input(f'Digite o Valor de "X": '))
         except ValueError:
             print('\033[31mErro, Tente Novamente!\033[m')
         else:
@@ -136,14 +137,14 @@ def option_two():
 def option_three():
     while True:
         try:
-            a = int(input('Digite o coeficiente "A": '))
+            a = float(input('Digite o coeficiente "A": '))
         except ValueError:
             print('\033[31mErro, Tente Novamente!\033[m')
         else:
             break
     while True:
         try:
-            b = int(input('Digite o coeficiente "B": '))
+            b = float(input('Digite o coeficiente "B": '))
         except ValueError:
             print('\033[31mErro, Tente Novamente!\033[m')
         else:
@@ -163,28 +164,29 @@ def option_three():
 def option_four():
     while True:
         try:
-            a = int(input('Digite o coeficiente "A": '))
+            a = float(input('Digite o coeficiente "A": '))
         except ValueError:
             print('\033[31mErro, Tente Novamente!\033[m')
         else:
             break
     while True:
         try:
-            b = int(input('Digite o coeficiente "B": '))
+            b = float(input('Digite o coeficiente "B": '))
         except ValueError:
             print('\033[31mErro, Tente Novamente!\033[m')
         else:
             break
     while True:
         try:
-            c = int(input('Digite o coeficiente "C": '))
+            c = float(input('Digite o coeficiente "C": '))
         except ValueError:
             print('\033[31mErro, Tente Novamente!\033[m')
         else:
             break
     x = np.arange(-1000, 1001, 1)
     y = (a * (x * x)) + (b * x) + c
-    plt.plot(x, y)
+    plt.plot(x, y, 'y', label='ax ** 2 + bx + c')
+    plt.legend(loc = 'upper left')
     plt.show()
 
 if __name__ == '__main__':

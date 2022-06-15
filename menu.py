@@ -1,5 +1,6 @@
 
-from função_segundo_grau import menu_functions
+from função_segundo_grau import menu_functions_one
+from função_exponencial import menu_functions_two
 from time import sleep
 
 def menu():
@@ -23,10 +24,10 @@ def menu():
                 sleep(1)
             else:
                 if ask == 1:
-                    menu_functions()
+                    menu_functions_one()
                     pass
                 elif ask == 2:
-                    pass
+                    menu_functions_two()
                 elif ask == 3:
                     pass
                 elif ask == 4:
