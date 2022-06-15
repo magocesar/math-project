@@ -38,7 +38,7 @@ def information():
             'Otávio Carneiro Nogueira',
             'Rodrigo Munch')
     print('-=-' * 10)
-    print('RCM CALCULADORA'.center(30))
+    print('RMC CALCULADORA'.center(30))
     print('-=-' * 10)
     sleep(.5)
     for n in part:
