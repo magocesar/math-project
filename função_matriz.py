@@ -1,9 +1,7 @@
 
-from msilib.schema import Error
+
 from time import sleep
-from urllib import robotparser
 import numpy as np
-from pyparsing import col
 
 def inform_matrix():
     while True:
@@ -102,7 +100,7 @@ def option_two(matrix):
     print('-=-' * 10)
     try:
         result = np.dot(matrix, second_matrix)
-    except Error:
+    except ValueError:
         print('As Condições de Multiplicação Não Foram Atendidas')
         sleep(1)
     else:
